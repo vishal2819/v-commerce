@@ -5,7 +5,7 @@ import axios from "axios";
 function Hero() {
   const [clicked, setClicked] = useState(false);
 
-  async function handleClick() {
+ function handleClick() {
     try {
           axios("/checkout");
       setClicked(!clicked);

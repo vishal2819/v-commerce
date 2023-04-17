@@ -1,9 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import Single from "../assets/2.svg";
 import Double from "../assets/6.png";
 import Triple from "../assets/7.png";
+import axios from "axios";
 
 function Cards() {
+  const [clicked, setClicked] = useState(false);
+
+  function handleClick() {
+    try {
+          axios("/checkout");
+      setClicked(!clicked);
+      window.location.href = "http://localhost:3000/";
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div className="w-full py-[10rem] px-4 bg-white">
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8">
@@ -14,7 +28,7 @@ function Cards() {
             className="w-20 mx-auto mt-[-3rem] bg-white"
           />
           <h2 className="text-2xl font-bold text-center py-8">
-            MERN Stack Development
+            Cloud & DevOps
           </h2>
           <p className="text-center text-4xl font-bold">$100</p>
           <div className="text-center font-medium">
@@ -22,7 +36,7 @@ function Cards() {
             <p className="py-2 border-b mx-8">24/7 Customer Support</p>
             <p className="py-2 border-b mx-8">Job Assistance</p>
           </div>
-          <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 text-black">
+          <button onClick={handleClick} className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 text-black">
             Start Trial
           </button>
         </div>
@@ -33,15 +47,15 @@ function Cards() {
             className="w-20 mx-auto mt-[-3rem] bg-transparent"
           />
           <h2 className="text-2xl font-bold text-center py-8">
-            MERN Stack Development
+            Mern Stack Development
           </h2>
           <p className="text-center text-4xl font-bold">$100</p>
           <div className="text-center font-medium">
             <p className="py-2 border-b mx-8 mt-8">Life time Course Access</p>
             <p className="py-2 border-b mx-8">24/7 Customer Support</p>
-            <p className="py-2 border-b mx-8">Job Assistance</p>
+            <p className="py-2 border-b mx-8">Live Classes </p>
           </div>
-          <button className="text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 bg-black">
+          <button onClick={handleClick} className="text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 bg-black">
             Start Trial
           </button>
         </div>
@@ -52,15 +66,15 @@ function Cards() {
             className="w-20 mx-auto mt-[-3rem] bg-white"
           />
           <h2 className="text-2xl font-bold text-center py-8">
-            MERN Stack Development
+            Java Full Stack Development
           </h2>
           <p className="text-center text-4xl font-bold">$100</p>
           <div className="text-center font-medium">
             <p className="py-2 border-b mx-8 mt-8">Life time Course Access</p>
             <p className="py-2 border-b mx-8">24/7 Customer Support</p>
-            <p className="py-2 border-b mx-8">Job Assistance</p>
+            <p className="py-2 border-b mx-8">Gifts And VOuchers </p>
           </div>
-          <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 text-black">
+          <button onClick={handleClick} className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 text-black">
             Start Trial
           </button>
         </div>
