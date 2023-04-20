@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Single from "../assets/2.svg";
 import Double from "../assets/6.png";
 import Triple from "../assets/7.png";
@@ -9,9 +9,9 @@ function Cards() {
 
   function handleClick() {
     try {
-          axios("/checkout");
+      axios("/checkout");
       setClicked(!clicked);
-      window.location.href = "http://localhost:3000/";
+      window.location.href = "https://braintree-payment.vercel.app/";
       console.log(response);
     } catch (error) {
       console.log(error);
@@ -36,7 +36,10 @@ function Cards() {
             <p className="py-2 border-b mx-8">24/7 Customer Support</p>
             <p className="py-2 border-b mx-8">Job Assistance</p>
           </div>
-          <button onClick={handleClick} className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 text-black">
+          <button
+            onClick={handleClick}
+            className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 text-black"
+          >
             Start Trial
           </button>
         </div>
@@ -55,7 +58,10 @@ function Cards() {
             <p className="py-2 border-b mx-8">24/7 Customer Support</p>
             <p className="py-2 border-b mx-8">Live Classes </p>
           </div>
-          <button onClick={handleClick} className="text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 bg-black">
+          <button
+            onClick={handleClick}
+            className="text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 bg-black"
+          >
             Start Trial
           </button>
         </div>
@@ -74,7 +80,10 @@ function Cards() {
             <p className="py-2 border-b mx-8">24/7 Customer Support</p>
             <p className="py-2 border-b mx-8">Gifts And VOuchers </p>
           </div>
-          <button onClick={handleClick} className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 text-black">
+          <button
+            onClick={handleClick}
+            className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 px-6 text-black"
+          >
             Start Trial
           </button>
         </div>

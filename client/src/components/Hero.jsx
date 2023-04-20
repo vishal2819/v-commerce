@@ -9,7 +9,7 @@ function Hero() {
     try {
           axios("/checkout");
       setClicked(!clicked);
-      window.location.href = "http://localhost:3000/";
+      window.location.href = "https://braintree-payment.vercel.app/";
       console.log(response);
     } catch (error) {
       console.log(error);
